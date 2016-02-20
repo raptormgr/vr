@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>s-vfu</title>
+    <meta name="description" content="Hello, World! • A-Frame">
+    <script src="aframe.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene>
+      <!--<a-entity camera="fov: 80; near: 0.5; far: 10000" look-controls="enabled: true" wasd-controls="enabled: true" rotation="-16.04281826366306 -33.80450991271859 0" position="0 0 0">
+        <a-entity visible="true" position="0 0 -1" geometry="primitive: ring; radiusOuter: 0.016; radiusInner: 0.01" material="color: #FFF; shader: flat; transparent: true; opacity: 1" scale="1 1 1" cursor="maxDistance: 1000;" raycaster="">
+        </a-entity>
+      </a-entity>
+      <a-entity scale="10 1 2"></a-entity>
+      <a-entity rotation="45 45 45" position="-3 1 20" id="doro" geometry="primitive: box" material="color: grey"></a-entity>
+      <a-entity rotation="45 45 45" position="20 1 -5" id="raptor" geometry="primitive: box" material="color: grey"></a-entity>
+   
+      <a-sky src="sky.jpg" radius="5000" segments-height='128' segments-width='128'></a-sky>
+      <a-cube material="color: white; shader:flat" rotation="0 10 0" width="1" depth="1" height="1">
+      </a-cube>
+      <a-entity position="5 0 0" rotation="0 0 0">
+      <a-sphere color="yellow" radius="1" position="-28 1 -15">
+
+        <a-mouseenter color="" radius="4" src="Peon_face.jpg"></a-mouseenter>
+
+        <a-mouseleave color="yellow" radius="1" src=""></a-mouseleave>
+
+      </a-sphere>
+
+      <a-plane color="white" rotation="0 -30 0" height="8" width="8" position="4 -1 -10">
+
+        <a-mouseenter color="yellow"></a-mouseenter>
+
+        <a-mouseleave src="nevidimaya_kartinka.png" color="white"></a-mouseleave>
+         <a-light color="white" position="0 5 0" type="point"></a-light>
+ <a-model src="guk.dae" position="-25 -3 10"></a-model>
+       <a-sky color="grey" radius="5000" segments-height='128' segments-width='128'></a-sky>
+      <a-model src="kfen.dae"  rotation="0 0 0" position="-20 1 -1"></a-model>
+      <a-model src="ulk.dae" position="-20 1 -1"></a-model>
+      <a-light color="white" position="0 5 0" type="point"></a-light>
+
+     <a-plane src="123.jpg" rotation="0 0 0" height="18" width="56" position="0 -1 -15">
+     <a-plane src="1234.jpg" rotation="20 0 0" height="18" width="56" position="0 17 3">
+    <a-light color="white" position="0 0 15" type="point"></a-light>
+
+
+      </a-plane>
+<a-entity id="box" scale="1 1 1" position="0 0 0" rotation="30 54 36">
+          <a-animation attribute="scale" from="0 0 0" to="1 1 1" begin="500" dur="2500" fill="both" easing="ease-out"></a-animation>
+          <a-animation attribute="position" from="0 -0.5 0" to="0 0 0" begin="500" dur="2500" fill="both" easing="ease-out"></a-animation>
+          <a-animation attribute="rotation" from="0 360 0" to="0 -360 0" begin="0" dur="5000" fill="backwards" easing="ease" repeat="10"></a-animation>
+          <a-cube width="0.25" depth="0.25" height="0.25" color="#EF2D5E"><a-root>
+  <a-entity geometry="primitive: box;
+                      width: 0.25;
+                      height: 0.25;
+                      depth: 0.25;
+                      translate: 0 0 0" material="color: #EF2D5E;
+                      opacity: 1.0;
+                      shader: standard;
+                      transparent: true;
+                      metalness: 0.0;
+                      roughness: 0.5;
+                      src: url()"></a-entity>
+</a-root></a-cube>
+        </a-entity>
+    <a-model src="kfen.dae" position="-5 1 -1" scale="1 1 1">
+      <a-animation attribute="position" from="0 -0.5 0" to="0 0 0" begin="500" dur="2500" fill="both" easing="ease-out"></a-animation>
+      <a-animation attribute="rotation" from="360 360 0" to="0 -360 0" begin="500" dur="5000" fill="backwards" easing="ease"></a-animation>
+    </a-model>-->
+     
+
+
+
+      <a-sky src="sky/skymap.jpg"></a-sky>
+    
+      <a-entity id="cam" no-click-look-controls="maxyaw:3.5; maxpitch:1.5" camera="fov: 80; near: 0.5; far: 10000" look-controls="enabled: true" wasd-controls="enabled: true" position="0 0 0">
+        <a-entity cursor="fuse: true; maxDistance: 30; timeout: 100" geometry="primitive: ring; radiusInner: 0.4; radiusOuter: 0.6" position="0 0 -1" scale=".035 .035 .035" material="color: #11D6DF; shader: flat" raycaster="">
+        </a-entity>
+        <a-animation id="camMove" attribute="position" to="0 2 10" begin="camMove1" dur="4000"></a-animation>
+      </a-entity>
+
+     <a-entity geometry="primitive: plane; height: 15; width: 15" rotation="350 180 360" position="0 0 25" material="side: double; сolor: red">
+    </a-entity>
+a
+      <!--1 ELEMENT animation -->
+      <a-entity id="a" geometry="primitive: circle; radius: 0.4"  position="2.5 -2.5 -5" material="src: url(img/logo.jpg)"  shader: flat>
+        <a-animation id="clickA" attribute="scale" begin="clickAopen" from="1 1 1" to="0.5 0.5 0.5" dur="500"></a-animation>
+        <a-animation id="clickA" attribute="scale" begin="clickAopen" from="0.5 0.5 0.5" to="1 1 1" dur="500"></a-animation>
+      </a-entity>
+
+      <a-model src="kfen.dae" position="-6 -1 35">
+        <a-animation id="animation11" attribute="rotation" begin="cursorOn11" to="360 360 360" dur="4000"></a-animation>
+        <a-animation id="animation12" attribute="position" to="-6 -2 -5" begin="cursorOn12" dur="4000"></a-animation>
+        <a-animation id="animation11close" attribute="rotation" begin="cursorOn11close" to="0 0 0" dur="4000"></a-animation>
+        <a-animation id="animation12close" attribute="position" to="-6 -2 35" begin="cursorOn12close" dur="4000"></a-animation>
+      </a-model>
+      <a-entity geometry="primitive: plane; height: 5; width: 4" rotation="0 -10 0" position="-6 -1 35" color="red" material="side: double; src: url(kfen.jpg)">
+        <a-animation id="animation13" attribute="rotation" begin="cursorOn13" to="360 320 360" dur="4000"></a-animation>
+        <a-animation id="animation14" attribute="position" begin="cursorOn14" to="5 1 -5"  dur="4000"></a-animation>
+        <a-animation id="animation13close" attribute="rotation" begin="cursorOn13close" to="0 0 0" dur="4000"></a-animation>
+        <a-animation id="animation14close" attribute="position" begin="cursorOn14close" to="5 1 35"  dur="4000"></a-animation>
+      </a-entity>
+      <a-entity id="closeA" geometry="primitive: plane; height: 0.5; width: 0.5" rotation="350 180 360" position="-6 3 39" material="side: double; src: url(close.png)">
+        <a-animation id="animation15" attribute="rotation" begin="cursorOn15" to="0 30 0" dur="4000"></a-animation>
+        <a-animation id="animation16" attribute="position" begin="cursorOn16" to="-6 3 -9" dur="4000"></a-animation>
+        <a-animation id="animation15close" attribute="rotation" begin="cursorOn15close" to="350 180 360" dur="4000"></a-animation>
+        <a-animation id="animation16close" attribute="position" begin="cursorOn16close" to="-6 3 39" dur="4000"></a-animation>
+        <a-animation id="clickAclose" attribute="scale" begin="clickAclose" from="1 1 1" to="0.5 0.5 0.5" dur="500"></a-animation>
+        <a-animation id="clickAclose" attribute="scale" begin="clickAclose" from="0.5 0.5 0.5" to="1 1 1" dur="500"></a-animation>
+      </a-entity>
+
+
+      <!--2 ELEMENT animation -->
+
+
+      <a-entity id="d" geometry="primitive: circle; radius: 0.6"  position="9 5 -5" material="src: url(img/logo.jpg)" rotation="0 -30 0"  shader: flat></a-entity>
+
+      <!--<a-entity  geometry="primitive: circle; radius: 1"  position="2.5 2 -5" material="src: url(img/logo.jpg)"  shader: flat>
+        
+        <a-animation attribute="rotation" id="d1" begin="event1" to="0 360 360" dur="5000" repeat="indefinite"></a-animation>
+
+      </a-entity>-->
+
+      <!--<a-model src="kfen.dae" position="-6 -85 35">
+        <a-animation id="1st_animation_1" attribute="rotation" begin="cursor_on_1st_1" to="360 360 360" dur="5000"></a-animation>
+        <a-animation id="1st_animation_2" attribute="position" from="-6 -1 35" to="-6 -1 -5" begin="cursor_on_1st_2" dur="5000"></a-animation>
+      </a-model>
+      <a-entity geometry="primitive: plane; height: 5; width: 4" rotation="0 -10 0" color="red" material="side: double; src: url(kfen.jpg)">
+        <a-animation attribute="rotation" begin="cursor_on_1st" to="360 320 360" dur="5000"></a-animation>
+        <a-animation attribute="position" from="5 1 25" to="5 1 -5" begin="cursor_on_1st" dur="5000"></a-animation>
+      </a-entity>-->
+    </a-scene>    
+  </body>
+  <script type="text/javascript">
+
+  /*var clickfunction = function(){
+  document.getElementById('aim').click();
+  console.log('click');
+  };
+
+  setInterval(clickfunction(), 1000);*/
+
+  document.querySelector('#d').addEventListener('click', function ()
+  {
+    document.querySelector('#d1').emit("event1");
+    console.log('event1');
+  });
+  document.querySelector('#a').addEventListener('click', function ()
+  {
+    document.querySelector('#camMove').emit("camMove1");
+    console.log('camMove');
+  });
+
+
+  document.querySelector('#a').addEventListener('click', function ()
+  {
+    document.querySelector('#clickA').emit("clickAopen");
+    document.querySelector('#animation11').emit("cursorOn11");
+    document.querySelector('#animation12').emit("cursorOn12");
+    document.querySelector('#animation13').emit("cursorOn13");
+    document.querySelector('#animation14').emit("cursorOn14");
+    document.querySelector('#animation15').emit("cursorOn15");
+    document.querySelector('#animation16').emit("cursorOn16");
+    console.log('eventA');
+  });
+
+  document.querySelector('#closeA').addEventListener('click', function ()
+  {
+    document.querySelector('#animation11close').emit("cursorOn11close");
+    document.querySelector('#animation12close').emit("cursorOn12close");
+    document.querySelector('#animation13close').emit("cursorOn13close");
+    document.querySelector('#animation14close').emit("cursorOn14close");
+    document.querySelector('#animation15close').emit("cursorOn15close");
+    document.querySelector('#animation16close').emit("cursorOn16close");
+    document.querySelector('#clickAclose').emit("clickAclose");
+    console.log('eventAclose');
+  });
+  /*document.querySelector('#d').addEventListener('click', function ()
+  {
+    document.querySelector('#d').emit("event1");
+    console.log('event1');
+    });
+/*
+  document.querySelector('#cube').addEventListener('click', function () {
+    document.querySelector('#cube').emit('fadeInCube');
+    console.log('click cube');
+  })
+  document.querySelector('#cube').addEventListener('mouseleave', function () {
+    document.querySelector('#cube').emit('fadeOutCube');
+    console.log('leave cube');
+  });
+  
+  document.querySelector('#doro').addEventListener('click', function () {
+    location.href = 'http://s-vfu.ru/user/user.php?id=453090630';
+    console.log('I was clicked!');
+    });
+    document.querySelector('#raptor').addEventListener('click', function () {
+      //this.setAttribute('material', 'color', 'red');
+      location.href = 'http://www.dotabuff.com/players/17815430';
+    });
+  document.querySelector('#d').addEventListener('click', function () {
+    location.href = 'http://s-vfu.ru/user/user.php?id=453090630';
+    console.log('I was clicked!');
+    });*/
+  
+
+
+  </script>
+</html>

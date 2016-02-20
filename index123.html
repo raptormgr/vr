@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! • A-Frame</title>
+    <meta name="description" content="Hello, World! • A-Frame">
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity camera="fov: 80; near: 0.5; far: 10000" look-controls="enabled: true" wasd-controls="enabled: true" rotation="-16.04281826366306 -33.80450991271859 0" position="0 0 0">
+        <a-entity visible="true" position="0 0 -1" geometry="primitive: ring; radiusOuter: 0.016; radiusInner: 0.01" material="color: #FFF; shader: flat; transparent: true; opacity: 1" scale="1 1 1" cursor="maxDistance: 1000;" raycaster="">
+        </a-entity>
+      </a-entity>
+      <a-entity scale="10 1 2"></a-entity>
+      <a-entity rotation="45 45 45" position="-3 1 20" id="doro" geometry="primitive: box" material="color: grey"></a-entity>
+      <a-entity rotation="45 45 45" position="20 1 -5" id="raptor" geometry="primitive: box" material="color: grey"></a-entity>
+   
+      <a-sky src="sky.jpg" radius="5000" segments-height='128' segments-width='128'></a-sky>
+      <a-cube material="color: white; shader:flat" rotation="0 10 0" width="1" depth="1" height="1">
+      </a-cube>
+      <a-entity position="5 0 0" rotation="0 0 0">
+      <a-sphere color="yellow" radius="1" position="-28 1 -15">
+
+        <a-mouseenter color="" radius="4" src="Peon_face.jpg"></a-mouseenter>
+
+        <a-mouseleave color="yellow" radius="1" src=""></a-mouseleave>
+
+      </a-sphere>
+
+      <!--<a-plane color="white" rotation="0 -30 0" height="8" width="8" position="4 -1 -10">
+
+        <a-mouseenter color="yellow"></a-mouseenter>
+
+        <a-mouseleave src="nevidimaya_kartinka.png" color="white"></a-mouseleave>
+
+      </a-plane>-->
+
+      <a-model src="kfen.dae" position="-15 -3 1"></a-model>
+      <a-light color="white" position="0 5 0" type="point"></a-light>
+
+
+    </a-scene>
+  </body>
+  <script type="text/javascript">
+  document.querySelector('#doro').addEventListener('click', function () {
+    location.href = 'http://s-vfu.ru/user/user.php?id=453090630';
+    console.log('I was clicked!');
+    });
+    document.querySelector('#raptor').addEventListener('click', function () {
+      //this.setAttribute('material', 'color', 'red');
+      location.href = 'http://www.dotabuff.com/players/17815430';
+    });
+  </script>
+</html>

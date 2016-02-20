@@ -1,0 +1,42 @@
+
+
+      
+
+
+<a-entity id="front-desk" position="10 1.4 -4" rotation="0 -75 0" geometry="primitive: plane; height: 1; width: 3.48;" material="src: url(img/icons/front-desk.png) opacity: .5; transparent: true;">
+      </a-entity>
+
+
+
+
+<a-entity id="cube" position="-2 -1 -3" rotation="0 0 0" geometry="primitive: box; height: 1; width: 1; depth: 1;" material="color: #FF0; opacity: .25; metalness: 0.5;">
+        <a-animation attribute="material.opacity" begin="fadeInCube" to="1" dur="1000"></a-animation>
+        <a-animation attribute="material.opacity" begin="fadeOutCube" to=".25" dur="1000"></a-animation>
+      </a-entity>
+
+
+
+
+document.querySelector('#cube').addEventListener('click', function () {
+        document.querySelector('#cube').emit('fadeInCube');
+        console.log('click cube');
+      });
+
+      document.querySelector('#cube').addEventListener('mouseleave', function () {
+        document.querySelector('#cube').emit('fadeOutCube');
+        console.log('leave cube');
+      });
+
+      document.querySelector('#front-desk').addEventListener('click', function () {
+        console.log('click front desk');
+        location.assign("front-desk.html");
+      });
+
+      document.querySelector('#front-desk').addEventListener('mouseleave', function () {
+        console.log('leave front desk');
+      });
+
+      // open new pages in home screen web app on iOS, not in mobile safari
+      (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
+
+    
